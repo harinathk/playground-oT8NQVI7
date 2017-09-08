@@ -1,6 +1,7 @@
-# Welcome!
+# Extract data from an object using peek() and map() methods
 
-This Java template lets you get started quickly with a simple one-page playground.
+Let us start with a simple example
+
 
 ```java runnable
 // { autofold
@@ -9,8 +10,8 @@ public class Main {
 public static void main(String[] args) {
 // }
 
-String message = "Hello World!";
-System.out.println(message);
+long count = Stream.of(1, 2, 3, 4, 5).map(i -> i * i).count();
+System.out.printf("This stream has %d elements", count);
 
 //{ autofold
 }
@@ -19,6 +20,29 @@ System.out.println(message);
 //}
 ```
 
-# Advanced usage
+# Square each element in the above stream and print
 
-If you want a more complex example (external libraries, viewers...), use the [Advanced Java template](https://tech.io/select-repo/385)
+```java runnable
+// { autofold
+public class Main {
+
+public static void main(String[] args) {
+// }
+
+long count = Stream.of(1, 2, 3, 4, 5)
+                    .map(i -> i * i)
+                    .peek(i -> System.out.printf("%d ", i))
+                    .count();
+System.out.printf("%nThe stream has %d elements", count);
+
+//{ autofold
+}
+
+}
+//}
+```
+
+The map() operation in the stream applies the given lambda function(i - > i * i) as an argument on the elements of the stream. 
+The count method returns the value 5.
+To Print the square value of each value in the stream, we used intermediate method peek().
+
