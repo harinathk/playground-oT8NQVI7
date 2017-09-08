@@ -1,5 +1,4 @@
-title: Simple Java template
-
+title: Extract Data from a Stream
 plan:
   - title: Java Snippet
     statement: statement.md
