@@ -5,6 +5,7 @@ Let us start with a simple example
 
 ```java runnable
 // { autofold
+import java.util.stream.Stream;
 public class Main {
 
 public static void main(String[] args) {
@@ -24,6 +25,7 @@ System.out.printf("This stream has %d elements", count);
 
 ```java runnable
 // { autofold
+import java.util.stream.Stream;
 public class Main {
 
 public static void main(String[] args) {
